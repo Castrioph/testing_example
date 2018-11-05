@@ -1,0 +1,24 @@
+{
+  "name": "buggy_code",
+  "version": "1.0.0",
+  "description": "A sample JavaScript project that is full of errors. This is a perfect practica for Unit and Integration testing",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Victor Sanchez Anguix",
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.2",
+    "csv": "^3.1.0",
+    "csv-load-sync": "^1.0.0",
+    "read-json-sync": "^2.0.0",
+    "watchify": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0"
+  }
+}

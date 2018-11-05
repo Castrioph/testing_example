@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for team.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> team.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.14% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>19/70</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.36% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/67</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const Player =  require('./player').Player;
+/**
+ * A class that represents a team in the fantasy football game
+ */
+class Team {
+&nbsp;
+    /**
+     * Creates an empty team object by providing a specified team name
+     * @param {String} teamName 
+     */
+    constructor(teamName){
+        this.teamName = teamName;
+        this.listPlayers = new Array();
+        this.teamValue = 0;
+    }
+&nbsp;
+    /**
+     * Retrieves the team name from the team
+     * @returns {String} The name of the team
+     */
+    getTeamName(){
+        return this.teamName;
+    }
+&nbsp;
+    /**
+     * Retrieves the money spent by the team on the players
+     * @returns {Number} The amount in euros
+     */
+    getTeamValue(){
+        return this.teamValue;
+    }
+&nbsp;
+    /**
+     * Retrieves the players that have been signed by the team
+     * @returns {Array&lt;Player&gt;} An array of Player objects that represent the players that play for the team
+     */
+    getPlayers(){
+        return this.listPlayers.slice();
+    }
+&nbsp;
+    /**
+     * Method employed to determine if a player already plays for the team
+     * @param {Player} player The player to be checked
+     * @returns {Boolean} true in case that the player is in the team, false otherwise
+     */
+    hasPlayer(player){
+        for(let playerInTeam of this.listPlayers){
+            if(playerInTeam.equals(player)){
+                return true;
+            }
+        }
+        return false;
+    }
+&nbsp;
+    /**
+     * Gets the total number of players currently in the team
+     * @returns {Number} the number of players in the team
+     */
+    getNumberPlayers(){
+        return this.listPlayers.length;
+    }
+&nbsp;
+    /**
+     * Adds a new player to the team
+     * @param {Player} player The player to be added
+     * @returns {Boolean} true in case that the player was successfully added to the team, false otherwise
+     */
+    addPlayer(player){
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(!this.hasPlayer(player)){
+            this.listPlayers.push(player);
+            this.teamValue+=player.getValue();
+            return true;
+        }
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    }
+&nbsp;
+    /**
+     * Adds a collection of new players to the team
+     * @param {Array&lt;Player&gt;} listPlayers The collection of players to be added
+     */
+    addPlayers(listPlayers){
+        for(let player of listPlayers){
+            this.addPlayer(player);
+        }
+    }
+&nbsp;
+    /**
+     * Gets the team overall quality. It is calculated as the average of the players' quality
+     * @returns {Number} representing the overall quality of the team
+     */
+<span class="fstat-no" title="function not covered" >    ge</span>tTeamOverallQuality(){
+<span class="cstat-no" title="statement not covered" >        return 0;</span>
+    }
+&nbsp;
+    /**
+     * Static method that gets a random valid tactic for a team: 3-4-3, 3-5-2, 3-6-1, 4-3-3, 4-4-2, 4-5-1, 5-3-2
+     * @returns {String} representing a tactic in the format numberBackers-numberMidFielders-numberForwarders
+     */
+<span class="fstat-no" title="function not covered" >    st</span>atic getRandomTeamTactic(){
+        let availableTactics = <span class="cstat-no" title="statement not covered" >[ '3-4-3', '3-5-2', '3-6-1', '4-3-3', '4-4-2', '4-5-1', '5-3-2' ];</span>
+        let randomIndex = <span class="cstat-no" title="statement not covered" >Math.random() * availableTactics.length;</span>
+<span class="cstat-no" title="statement not covered" >        return availableTactics[randomIndex];</span>
+    }
+&nbsp;
+    /**
+     * Static method that gets a tactic and parses it to extract the number of defenders, midfielders, and attackers
+     * @param {String} tactic A tactic in string format numberBackers-numberMifielders-numberForwarders
+     * @returns {Array&lt;Number&gt;} An array of numbers with 3 positions: numberBackers, numberMidfielders, numberForwarders
+     * @throws {Error} In case that the tactic is not specified in the format numberBackers-numberMidfielders-numberForwarders
+     * @throws {Error} In case that the specified tactic employs more than 10 (+1) players
+     */
+<span class="fstat-no" title="function not covered" >    st</span>atic _parseTactic(tactic){
+        //Split the string using the - character
+        let playersPerPosition = <span class="cstat-no" title="statement not covered" >tactic.split('-');</span>
+        //If more or less than 3 positions, the tactic is in incorrect format
+<span class="cstat-no" title="statement not covered" >        if(playersPerPosition.length!==3){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('Tactics may only take 3 positions and got ' + playersPerPosition + ' with '  +</span>
+            playersPerPosition.length + ' elements');
+        }
+        //Parse tactic elements to numbers
+<span class="cstat-no" title="statement not covered" >        playersPerPosition = playersPerPosition.map( <span class="fstat-no" title="function not covered" >el</span>em =&gt; <span class="cstat-no" title="statement not covered" >parseInt(elem) </span>);</span>
+        //If any of the elements is not an integer, then raise error
+<span class="cstat-no" title="statement not covered" >        if( playersPerPosition.any( <span class="fstat-no" title="function not covered" >n </span>=&gt; <span class="cstat-no" title="statement not covered" >isNaN(n) </span>) ){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('One of the specified positions is not a number');</span>
+        }
+        
+<span class="cstat-no" title="statement not covered" >        return playersPerPosition;</span>
+    }
+&nbsp;
+    /**
+     * Gets a random number of players from a group of players
+     * @param {Array&lt;Player&gt;} listPlayers The group of players to select from
+     * @param {Number} numberPlayers The total number of players to select
+     * @returns {Array&lt;Player&gt;} The group of players selected
+     * @throws Error in case that there are not enough players to choose randomly
+     */
+<span class="fstat-no" title="function not covered" >    st</span>atic _getRandomPlayers(listPlayers,numberPlayers){
+<span class="cstat-no" title="statement not covered" >        if(listPlayers.length&lt;numberPlayers){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('Insufficient players to make a team');</span>
+        }
+        let selectedPlayers = <span class="cstat-no" title="statement not covered" >new Array();</span> //Array used to put chosen players
+        let copyListPlayers = <span class="cstat-no" title="statement not covered" >listPlayers.slice();</span> //Array that copies the original pool of players. Used to dynamically remove players
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for(let playersAdded = 0; playersAdded&lt;numberPlayers; playersAdded++){ //For each random player to select</span>
+            let indexPlayer = <span class="cstat-no" title="statement not covered" >Math.floor(Math.random()*copyListPlayers.length);</span> //Index of the random player to be chosen
+            let player = <span class="cstat-no" title="statement not covered" >copyListPlayers[indexPlayer];</span>
+<span class="cstat-no" title="statement not covered" >            selectedPlayers.push(player);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return selectedPlayers;</span>
+    }
+&nbsp;
+    /**
+     * Static method employed to generate a random team (11 players) from a list of possible players
+     * @param {Array&lt;Player&gt;} listPossiblePlayers The pool of players to choose from
+     * @param {String} tactic The tactic that specifies the players per position. Follows the numberBackers-numberMidifielders-numberForwarders format
+     * @param {String} teamName The name for the new team
+     * @param {Number} teamValue The maximum budget to spend on adding players to the team
+     * @returns {Team} A new team formed by random players
+     * @throws {Error} In case that the tactic specifies less or more than 11 players, or if an invalid tactic is provided (&lt;3 defenders, &lt;3 midfielders, &lt;1 attacker) 
+     */
+<span class="fstat-no" title="function not covered" >    st</span>atic createRandomTeam(listPossiblePlayers,tactic,teamName,teamValue){
+&nbsp;
+        let playersPerPosition = <span class="cstat-no" title="statement not covered" >Team._parseTactic(tactic);</span>
+        let numberBackers = <span class="cstat-no" title="statement not covered" >parseInt(playersPerPosition[0]);</span>
+        let numberMidfielders = <span class="cstat-no" title="statement not covered" >parseInt(playersPerPosition[1]);</span>
+        let numberForwarders = <span class="cstat-no" title="statement not covered" >parseInt(playersPerPosition[2]);</span>
+        let totalPlayersInTeam = <span class="cstat-no" title="statement not covered" >numberBackers + numberForwarders + numberMidfielders + 1;</span>
+<span class="cstat-no" title="statement not covered" >        if(totalPlayersInTeam!=11){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('The team must have exactly 11 players');</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(numberBackers&lt;3){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('At least 3 defenders are required');</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(numberMidfielders&lt;3){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('At least 3 midfielders are required');</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(numberForwarders&lt;1){</span>
+<span class="cstat-no" title="statement not covered" >            throw Error('At least 1 forward player is required');</span>
+        }
+&nbsp;
+        /*Infinite loop employed to generate random teams. It will break in case that the team
+        generated takes less than the maximum budget*/
+<span class="cstat-no" title="statement not covered" >        while(true){</span>
+            let newTeam = <span class="cstat-no" title="statement not covered" >new Team(teamName);</span>
+&nbsp;
+            let setPlayersInTeam = <span class="cstat-no" title="statement not covered" >new Set();</span> //Used to check for players already employed
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            for( let selectionConfiguration of [ //For loop employed to select goalkeeper, backers, midfielders, and forwarders</span>
+                [<span class="fstat-no" title="function not covered" >pl</span>ayer=&gt;<span class="cstat-no" title="statement not covered" >player.isGoalKeeper(),</span> 1], //Elements to iterate over are an array of [functionToFilterPosition,numberPlayerstoChooseInPosition]
+                [<span class="fstat-no" title="function not covered" >pl</span>ayer=&gt;<span class="cstat-no" title="statement not covered" >player.isBack(),</span>numberBackers],
+                [<span class="fstat-no" title="function not covered" >pl</span>ayer=&gt;<span class="cstat-no" title="statement not covered" >player.isMidfielder(),</span>numberMidfielders],
+                [<span class="fstat-no" title="function not covered" >pl</span>ayer=&gt;<span class="cstat-no" title="statement not covered" >player.isForward(),</span>numberForwarders]
+            ] ){
+                let conditionFunction = <span class="cstat-no" title="statement not covered" >selectionConfiguration[0];</span>
+                
+                let numberOfPlayersToSelect = <span class="cstat-no" title="statement not covered" >selectionConfiguration[1];</span>
+                
+                let poolPlayers = <span class="cstat-no" title="statement not covered" >listPossiblePlayers.filter(conditionFunction);</span>
+                
+                let selectedPlayers = <span class="cstat-no" title="statement not covered" >Team._getRandomPlayers(poolPlayers,numberOfPlayersToSelect);</span>
+                
+<span class="cstat-no" title="statement not covered" >                selectedPlayers.forEach(<span class="fstat-no" title="function not covered" >pl</span>ayer =&gt; <span class="cstat-no" title="statement not covered" >setPlayersInTeam.add(player.getID()))</span>;</span>
+                
+<span class="cstat-no" title="statement not covered" >                newTeam.addPlayers(selectedPlayers);</span>
+            }
+&nbsp;
+            
+        }
+&nbsp;
+    }
+&nbsp;
+}
+&nbsp;
+exports.Team = Team;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 05 2018 12:40:47 GMT+0100 (Hora estándar romance)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
