@@ -2,6 +2,7 @@ const extractDataFromRawJSON = require('../app/data/json_reader').extractDataFro
 const readJSONData = require('../app/data/json_reader').readJSONData;
 const Team = require('../app/data/team').Team;
 const Player = require('../app/data/player').Player;
+
 test('Test readJSONData 1: Valid JSON', () => {
     let jsonObj = readJSONData('./data/sample.json');
     //Check that exacly 3 objects were read
@@ -54,6 +55,13 @@ test('Test extractDataFromRawJSON', () => {
     expect(arrayPlayers[0].isBack()).toBe(false);
 });
 
+test('Test player.equals', () => {
+    let jsonObjects = readJSONData('./data/sample.json');
+    let arrayPlayers = extractDataFromRawJSON(jsonObjects);
+    let anotherArray = extractDataFromRawJSON(jsonObjects)
+    expect(arrayPlayers[0].equals(anotherArray[0]));
+});
+
 test('Test team_constructor: Default team', () => {
     let name = 'Testing';
     let team = new Team(name);
@@ -85,11 +93,44 @@ test('Test team_constructor: Add players at the same time', () => {
     let second_player = new Player(6);
     second_player.value = 2;
     second_player.name = 'Marcos';
-    let players = [player,second_player];
+    let players = [player, second_player];
     team.addPlayers(players);
     expect(team.getTeamName()).toBe('Testing');
     expect(team.getTeamValue()).toBe(3);
     expect(team.getNumberPlayers()).toBe(2);
     expect(team.hasPlayer(player)).toBe(true);
     expect(team.hasPlayer(second_player)).toBe(true);
+});
+
+test('Test team_numberplayers', () => {
+    let jsonObjects = readJSONData('./data/sample.json');
+    let arrayPlayers = extractDataFromRawJSON(jsonObjects);
+    let team = new Team('Testing');
+    team.addPlayers(arrayPlayers);
+    expect(team.getNumberPlayers()).toBe(3);
+    expect(team.getTeamOverallQuality()).toBe(93);
+});
+
+test('Test team_getRandomTeamTactic() I', () => {
+    let availableTactics = ['3-4-3', '3-5-2', '3-6-1', '4-3-3', '4-4-2', '4-5-1', '5-3-2'];
+    let randomTactics = 0;
+    let i = 0;
+    for (i; i<1000; i++){
+        randomTactics = Team.getRandomTeamTactic();
+        expect(availableTactics.includes(randomTactics)).toBe(true);
+    }
+});
+
+test('Test _parseTactic I', () => {
+    let availableTactics = ['3,4,3' , '3,5,2', '3,6,1', '4,3,3', '4,4,2', '4,5,1', '5,3,2'];
+    let i = 0;
+    let parseTactic = 0;
+    for (i; i<1000; i++){
+        parseTactic =Team._parseTactic(Team.getRandomTeamTactic()).toString();
+        expect(availableTactics.includes(parseTactic)).toBe(true);
+    }
+});
+
+test('Test _getRandomPlayers', () => {
+
 });
